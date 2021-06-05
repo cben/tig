@@ -21,6 +21,7 @@ extern struct view help_view;
 static inline void
 open_help_view(struct view *prev, enum open_flags flags)
 {
+	prev->keymap->hidden = false;
 	open_view(prev, &help_view, flags);
 }
 

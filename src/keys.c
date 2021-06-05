@@ -24,9 +24,10 @@ struct keybinding {
 };
 
 static struct keymap keymaps[] = {
-	{ "generic" },
-	{ "search" },
-#define VIEW_KEYMAP(id, name) { #name }
+	// Initially hide most help sections, show generic.
+	{ "generic", false },
+	{ "search", true },
+#define VIEW_KEYMAP(id, name) { #name, true }
 	VIEW_INFO(VIEW_KEYMAP)
 };
 

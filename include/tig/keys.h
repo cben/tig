@@ -26,9 +26,9 @@ struct keybinding;
 
 struct keymap {
 	const char *name;
+	bool hidden;
 	struct keybinding **data;
 	size_t size;
-	bool hidden;
 };
 
 struct key {
